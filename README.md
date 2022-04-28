@@ -22,7 +22,7 @@ Each object has the following attributes:
   - `stop`: stop char index of this token (exclusive)
   - `stanza_pos`: Part of speech tags (fine), obtained via "Stanza" (Stanford)
   - `stanza_dependency`: Dependency information obtained via "Stanza", consists of
-    - `head`: 0-based index in the list of tokens for the token making up the dependency head
+    	- `head`: 0-based index in the list of tokens for the token making up the dependency head, will be null for the root token
 	- `type`: Dependency relation identifier as string
 - `entities`: List of entities in this sample, comprised of objects with the following attributes:
   - `text`: Text of this entity
@@ -42,7 +42,7 @@ Each line should be a JSON-object with the following attributes:
 - `id`: Id of the sample this prediction was made for
 - `relations`: A list of predicted relations, with one object per relation consisting of:
   - `head_entity`: an object describing the source entity by the following attributes    
-    - `start`: start char index in the original text for this entity (inclusive). If your approach predicts non-continuous spans use a list for `start` and `stop`.
+    	- `start`: start char index in the original text for this entity (inclusive). If your approach predicts non-continuous spans use a list for `start` and `stop`.
 	- `stop`: stop char index in the original text for this entity (exclusive). If your approach predicts non-continuous spans use a list for `start` and `stop`.
   - `tail_entity`: an object describing the target entity of this relation, same format as `head_entity`
   - `type`: the predicted type of this relation as string
