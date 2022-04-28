@@ -31,7 +31,9 @@ Each object has the following attributes:
   - `head_entity`: Entity that functions as source of this relation, object in the same form as objects in the list of `entities`
   - `tail_entity`: Entity that functions as target of this relation, object in the same form as objects in the list of `entities`
   - `type`: Relation type as string
-  
+
+An example that follows this format is [available](sample.jsonl).
+
 # Description of expected output format
 
 Given a test dataset, the output of your approach should be a file containing one line per sample in the given test set. 
